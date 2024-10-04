@@ -1,0 +1,143 @@
+.login {
+    color: white;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1.9rem;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 130px;
+    padding-top: 50px;
+}
+.login>h2{
+    color: black;
+    font-weight: bolder;
+    font-size: 70px;
+    position: relative;
+    top: -25vh;
+}
+.about-img img {
+    position: relative;
+    max-width: 650px;
+    height: 70vh;
+    width: 100%;
+}
+
+form{
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+}
+label{
+    color: black;
+}
+.form-control{
+    background: #272727;
+}
+#loginbtn{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid white;
+    box-shadow: 0 0 40px #272727;
+    color: white;
+    cursor: pointer;
+    background-color: #DE3163;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+#loginbtn:hover{
+    background-color: white;
+    color: #DE3163;
+}
+#register{
+    color: blue;
+}
+#register>p>a{
+    color: deepskyblue;
+    position: absolute;
+    left: 23vw;
+    top: 81vh;
+}
+#loginl>p>a{
+    left: 10vw;
+}
+div:nth-child(2)>div>button:hover{
+    background-color: white;
+    color: #DE3163;
+}
+
+
+@media (max-width: 1200px) {
+    .About-me {
+        padding: 100px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-img img {
+        left: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about-text1 h2 {
+        font-size: 50px;
+        top: 0;
+    }
+
+    .about-text1 h4 {
+        font-size: 28px;
+        top: 0;
+    }
+
+    .about-text1 p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .About-me {
+        padding: 60px;
+    }
+
+    .about-text1 h2 {
+        font-size: 40px;
+    }
+
+    .about-text1 h4 {
+        font-size: 24px;
+    }
+
+    .about-text1 p {
+        font-size: 18px;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .About-me {
+        padding: 40px;
+    }
+
+    .about-text1 h2 {
+        font-size: 32px;
+    }
+
+    .about-text1 h4 {
+        font-size: 20px;
+    }
+
+    .about-text1 p {
+        font-size: 16px;
+    }
+
+    .about-img img {
+        width: 100%;
+    }
+}
