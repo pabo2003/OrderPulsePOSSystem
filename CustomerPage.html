@@ -2,9 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Customer Mange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Pulse - Customer Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Order Pulse</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="CustomerPage.html">Customer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ItemPage.html">Item</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="placeOrderPage.html">Order</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4 p-4" style="background:white">
+    <div class="row">
+        <div class="col-md-6">
+            <form style="background: white" class="p-3">
+                <div class="form-group">
+                    <label for="customerName">Customer Name:</label>
+                    <input type="text" class="form-control" id="customerName" placeholder="Enter customer name">
+                </div>
+                <div class="form-group">
+                    <label for="customerNIC">Customer NIC:</label>
+                    <input type="text" class="form-control" id="customerNIC" placeholder="Enter customer NIC">
+                </div>
+                <div class="form-group">
+                    <label for="customerContact">Customer Contact:</label>
+                    <input type="text" class="form-control" id="customerContact" placeholder="Enter customer contact">
+                </div>
+                <button type="button" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+        <div class="col-md-6" >
+            <h2>Search Customer</h2>
+            <div class="form-group">
+                <label for="inputContactNIC">Input Contact NIC:</label>
+                <input type="text" class="form-control" id="inputContactNIC" placeholder="Enter contact NIC">
+            </div>
+            <button type="button" class="btn btn-primary" style="background: #DE3163">Search</button>
+            <button type="button" class="btn btn-danger" style="background: #DE3163">Delete</button>
+            <button type="button" class="btn btn-warning" style="background: #DE3163">Update</button>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer NIC</th>
+                    <th>Customer Contact</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Sunil</td>
+                    <td>123456789</td>
+                    <td>0112345678</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Kamal</td>
+                    <td>987654321</td>
+                    <td>0119876543</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </html>
