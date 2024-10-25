@@ -1,4 +1,4 @@
-/*
+
 //Customer page
 
 //customer array
@@ -37,4 +37,4 @@ $("#customerAddBtn").on("click",function () {
     cusArray.push(customer);
 
     loadCustomerTable();
-})*/
+});
