@@ -1,40 +1,42 @@
+/*==============================================Customer==================================================================*/
+/*add customer*/
+let customer_arr = [];
+$("#Customer-add").on("click", function() {
+    let Customer_Name =$("#customerName").val();
+    let Customer_NIC =$("#customerNIC").val();
+    let Customer_Contact =$("#customerContact").val();
 
-//Customer page
+    console.log(Customer_Name);
+    console.log(Customer_NIC);
+    console.log(Customer_Contact);
 
-//customer array
-let cusArray = [];
+    let Customer = {
+        id:"C"+( customer_arr.length + 1) ,
+        CustomerName : Customer_Name,
+        CustomerNIC : Customer_NIC,
+        CustomerContact: Customer_Contact
+    };
+    let existCustomer = false;
+    for (let i = 0; i <customer_arr.length; i++) {
+        if (customer_arr[i].CustomerNIC === Customer_NIC) {
+            existCustomer = true;
+            console.log("All ready add Customer");
+            break;
+        }
+    }
+    if (!existCustomer) {
+        customer_arr.push(Customer);
+        console.log(customer_arr);
+        loadCustomerTable();
+    }
+
+});
 
 const loadCustomerTable = () =>{
     $("#customerTableBody").empty();
-    cusArray.map((item, index)=>{
+    customer_arr.map((item, index) =>{
         console.log(item);
-        let data = `<tr>
-            <td>${item.name}</td>
-            <td>${item.nicNo}</td>
-            <td>${item.contact}</td>
-        </tr>`
+        let data =`<tr><td>${item.id}</td><td>${item.CustomerName}</td><td>${item.CustomerNIC}</td><td>${item.CustomerContact}</td></tr>`
         $("#customerTableBody").append(data);
-    })
+    });
 }
-
-//Add customer
-$("#customerAddBtn").on("click",function () {
-    let name = $('#customerName').val();
-    let nicNo = $('#customerNIC').val();
-    let contact = $('#customerContact').val();
-
-    console.log("Name:",name);
-    console.log("NIC No:",nicNo);
-    console.log("Contact No:",contact);
-
-    let customer = {
-        id: cusArray.length + 1,
-        name: name,
-        nicNo: nicNo,
-        contact: contact
-    };
-
-    cusArray.push(customer);
-
-    loadCustomerTable();
-});

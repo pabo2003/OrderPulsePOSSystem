@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Page</title>
-    <link rel="stylesheet" href="Assest/StyleSheets/dashboardPage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         /* navbar */
@@ -798,7 +797,7 @@
 </section>
 
 <!--Customer page-->
-<div class="container mt-4 p-4" style="background:white" id="customerPage">
+<div id="customerPage" class="container mt-4" style="background: #ced6e0;">
     <div class="row">
         <div class="col-md-6">
             <form style="background: white" class="p-3">
@@ -814,27 +813,21 @@
                     <label for="customerContact">Customer Contact:</label>
                     <input type="text" class="form-control" id="customerContact" placeholder="Enter customer contact">
                 </div>
-                <button type="button" class="btn btn-primary">Add</button>
+                <div class="form-group">
+                    <label for="customerContact">Customer Address:</label>
+                    <input type="text" class="form-control" id="customerAddress" placeholder="Enter customer contact">
+                </div>
+                <button id="Customer-add" type="button" class="btn btn-primary">Add Customer</button><br><br>
+                <button id="customer-delete" type="button" class="btn btn-danger">Delete Customer</button><br><br>
+                <button id="customer-update" type="button" class="btn btn-warning">Update Customer</button>
             </form>
-        </div>
-        <div class="col-md-6" >
-            <h2>Search Customer</h2>
-            <div class="form-group">
-                <label for="inputContactNIC">Input Contact NIC:</label>
-                <input type="text" class="form-control" id="inputContactNIC" placeholder="Enter contact NIC">
-            </div>
-            <button type="button" class="btn btn-primary" style="background: #DE3163">Search</button>
-            <br><br>
-            <button type="button" class="btn btn-danger" style="background: #DE3163">Delete</button>
-            <br><br>
-            <button type="button" class="btn btn-warning" style="background: #DE3163">Update</button>
         </div>
     </div>
 
     <div class="row mt-4">
         <div class="col-md-12">
-            <table class="table table-striped">
-                <thead>
+            <table class="table">
+                <thead class="table-light">
                 <tr>
                     <th>Customer ID</th>
                     <th>Customer Name</th>
@@ -843,19 +836,8 @@
                 </tr>
                 </thead>
                 <tbody id="customerTableBody">
-                <!--<tr>
-                    <td>1</td>
-                    <td>Sunil</td>
-                    <td>123456789</td>
-                    <td>0112345678</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Kamal</td>
-                    <td>987654321</td>
-                    <td>0119876543</td>
-                </tr>
--->                </tbody>
+
+                </tbody>
             </table>
         </div>
     </div>
