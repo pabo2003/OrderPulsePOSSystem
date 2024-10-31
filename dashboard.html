@@ -874,7 +874,6 @@
             <table class="table">
                 <thead class="table-light">
                 <tr>
-                    <th>Item Code</th>
                     <th>Item Name</th>
                     <th>Item Price</th>
                     <th>Item Qty</th>
@@ -894,10 +893,12 @@
         <div class="col-md-6 p-3" style="background: white">
             <h2>Customer Information</h2>
             <div class="form-group">
-                <label for="customer">Customer:</label>
-                <select class="form-control" id="customer">
-                    <option value="C001">C001</option>
-                    <option value="New Customer">New Customer</option>
+                <label for="customerSelect">Customer:</label>
+                <select class="form-select" id="customerSelect" required>
+                    <option selected disabled value="Choose a customer">Choose a customer</option>
+                    <!--<option value="Customer 1">Customer 1</option>
+                    <option value="Customer 2">Customer 2</option>
+                    <option value="Customer 3">Customer 3</option>-->
                 </select>
             </div>
             <div class="form-group">
@@ -916,9 +917,12 @@
         <div class="col-md-5 p-3" style="background: white">
             <h2>Item Information</h2>
             <div class="form-group">
-                <label for="item">Item:</label>
-                <select class="form-control" id="item">
-                    <option value="Pizza">Pizza</option>
+                <label for="itemSelect">Item:</label>
+                <select class="form-select" id="itemSelect" required>
+                    <option selected disabled value="">Choose an item</option>
+                    <option value="Item 1" data-price="10">Item 1 ($10)</option>
+                    <option value="Item 2" data-price="20">Item 2 ($20)</option>
+                    <option value="Item 3" data-price="15">Item 3 ($15)</option>
                 </select>
             </div>
             <div class="form-group">
@@ -930,8 +934,8 @@
                 <input type="text" class="form-control" id="itemQtyOnHand" placeholder="Enter item quantity on hand">
             </div>
             <div class="form-group">
-                <label for="orderQuantity">Order Quantity:</label>
-                <input type="text" class="form-control" id="orderQuantity" placeholder="Enter order quantity">
+                <label for="quantity">Order Quantity:</label>
+                <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" required="">
             </div>
             <button type="button" class="btn btn-primary">Place Order</button>
         </div>
