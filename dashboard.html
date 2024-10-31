@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Dashboard Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <style>
         /* navbar */
         #navBar {
@@ -818,8 +819,8 @@
                     <input type="text" class="form-control" id="customerAddress" placeholder="Enter customer contact">
                 </div>
                 <button id="Customer-add" type="button" class="btn btn-primary">Add Customer</button><br><br>
-                <button id="customer-delete" type="button" class="btn btn-danger">Delete Customer</button><br><br>
-                <button id="customer-update" type="button" class="btn btn-warning">Update Customer</button>
+                <button id="customer-update" type="button" class="btn btn-warning">Update Customer</button><br><br>
+                <button id="customer-delete" type="button" class="btn btn-danger">Delete Customer</button>
             </form>
         </div>
     </div>
@@ -829,10 +830,10 @@
             <table class="table">
                 <thead class="table-light">
                 <tr>
-                    <th>Customer ID</th>
                     <th>Customer Name</th>
                     <th>Customer NIC</th>
                     <th>Customer Contact</th>
+                    <th>Customer Address</th>
                 </tr>
                 </thead>
                 <tbody id="customerTableBody">
@@ -860,20 +861,12 @@
                     <label for="customerContact">Item Qty:</label>
                     <input type="text" class="form-control" id="customerContactI" placeholder="Enter Item Qty">
                 </div>
-                <button type="button" class="btn1 btn-primary">Add</button>
+                <button type="button" class="btn btn-danger">Add Item</button><br><br>
+                <button type="button" class="btn btn-danger">Delete Item</button><br><br>
+                <button type="button" class="btn btn-warning">Update Item</button><br><br>
             </form>
         </div>
-        <div id="search" class="col-md-5 p-2" style="background: white">
-            <h2 style="background: #DE3163">Search Item</h2>
-            <div class="form-group">
-                <label for="inputItemCode">Input Item Code:</label>
-                <input type="text" class="form-control" id="inputItemCode" placeholder="Enter Item Code or Name">
-            </div>
-            <button type="button" class="btn btn-primary">Search</button><br><br>
-            <button type="button" class="btn btn-danger">Delete</button><br><br>
-            <button type="button" class="btn btn-warning">Update</button><br><br>
-            <button type="button" class="btn btn-warning">Get All Item &nbsp;&nbsp;&nbsp;</button>
-        </div>
+
     </div>
 
     <div class="row mt-4">
@@ -993,7 +986,11 @@
         </div>
     </div>
 </div>
+
+<!--script-->
 <script src="lib/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<script type="module" src="Controller/customerController.js"></script>
 <script>
     let home_nav = document.getElementById("home_nav");
     let customer_nav = document.getElementById("customer_nav");
