@@ -12,7 +12,6 @@ function validateNIC(nic) {
     return sriLankanNICRegex.test(nic);
 }
 
-/* Add customer */
 let customer_arr = [];
 let selectCustomerIndex = null;
 

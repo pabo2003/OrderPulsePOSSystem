@@ -798,7 +798,7 @@
 </section>
 
 <!--Customer page-->
-<div id="customerPage" class="container mt-4" style="background: #ced6e0;">
+<div id="customerPage" class="container mt-4" style="background: white;">
     <div class="row">
         <div class="col-md-6">
             <form style="background: white" class="p-3">
@@ -850,20 +850,20 @@
         <div class="col-md-6">
             <form style="background: white" class="p-3">
                 <div class="form-group">
-                    <label for="customerName">Item Name:</label>
-                    <input type="text" class="form-control" id="customerNameI" placeholder="Enter Item name">
+                    <label for="ItemName">Item Name:</label>
+                    <input type="text" class="form-control" id="itemName" placeholder="Enter Item name">
                 </div>
                 <div class="form-group">
                     <label for="customerNIC">Item Price:</label>
-                    <input type="text" class="form-control" id="customerNICI" placeholder="Enter Item Price">
+                    <input type="text" class="form-control" id="itemPrice1" placeholder="Enter Item Price">
                 </div>
                 <div class="form-group">
                     <label for="customerContact">Item Qty:</label>
-                    <input type="text" class="form-control" id="customerContactI" placeholder="Enter Item Qty">
+                    <input type="text" class="form-control" id="itemQty" placeholder="Enter Item Qty">
                 </div>
-                <button type="button" class="btn btn-danger">Add Item</button><br><br>
-                <button type="button" class="btn btn-danger">Delete Item</button><br><br>
-                <button type="button" class="btn btn-warning">Update Item</button><br><br>
+                <button type="button" class="btn btn-danger" id="item_add">Add Item</button><br><br>
+                <button type="button" class="btn btn-warning" id="item_update">Update Item</button><br><br>
+                <button type="button" class="btn btn-danger" id="item_delete">Delete Item</button>
             </form>
         </div>
 
@@ -880,19 +880,8 @@
                     <th>Item Qty</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>I001</td>
-                    <td>Cake</td>
-                    <td>40$</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td>I002</td>
-                    <td>Toffee</td>
-                    <td>20$</td>
-                    <td>100</td>
-                </tr>
+                <tbody id="itemTableBody">
+
                 </tbody>
             </table>
         </div>
